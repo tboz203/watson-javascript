@@ -1,0 +1,51 @@
+## okay. things we need
+- variable
+- array
+- declare function
+- assign
+- write
+- writeln
+- string prompt
+- numeric prompt
+- while
+- for
+- if
+- call function
+- return
+
+> this is going to be freaking complicated :/
+
+## high-level overview
+okay. so, an execution stack. we start with an empty `program` (an empty
+list). run/walking an empty program will take a single `step`: exit. we will
+be able to fire `actions` that insert text into our text field/program display,
+and simultaneously add `step` objects to our program. run/walking a program
+with steps in it will `execute` the first step, and procede to the next step
+indicated by the current step. special steps are allowed to automatically
+procede to the next step (the 3-part for-loop step) actions are allowed to
+insert multiple steps into the program (ex: for-loop-condition & for-loop-end;
+if-condition, if-else, and if-end)
+
+we need to think about variables. the `program` object will have a second part:
+a sorted list... yes? binary tree? we really don't care that much about
+efficiency right here. if it gets to be a problem, we'll do a tree later. for
+now, sorted list. regardless, sorted list... needs to be a dict/map. we've
+essentially got 4 types: number, string, and array of each. don't think we're
+allowing 2-d arrays, or booleans. ought to simplify things a tad. ooh, we need
+to support functions. 3rd part, function list? make separate sub-programs, or
+references within main list? i like sub-programs. yes.
+
+---
+
+will or will not every statement have its own line? we can make it that way. we
+won't be able to... wait. can you put two statements on one line in the
+original? you have thinks that kind of steal from eachother, like the prompt
+statements. 
+
+## update
+### 2014-01-12.01-34-01
+
+okay, we've got a good bit of framework down, but i'm getting fuzzy now, lol.
+the flow controll stuff is mostly there, we'll need to work on some `function`
+type. we'll probably use a function as the body of the program too. will
+probably need fiddling w/ function list and walk/jog/run. we'll see.
